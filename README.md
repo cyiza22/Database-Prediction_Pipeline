@@ -2,7 +2,7 @@
 
 A comprehensive database management and API system built with FastAPI, PostgreSQL, and MongoDB for the Telco Customer Churn dataset.
 
-## 🎯 Project Overview
+##  Project Overview
 
 This project implements a complete database pipeline with:
 - **Task 1**: Database design and implementation (SQL and NoSQL)
@@ -10,7 +10,7 @@ This project implements a complete database pipeline with:
 
 ## 📋 Features
 
-### Task 1 - Database Implementation ✅
+### Task 1 - Database Implementation 
 - **PostgreSQL Database**: Relational database with 4 tables
   - `customers`: Customer demographic information
   - `contracts`: Contract and billing details
@@ -21,14 +21,14 @@ This project implements a complete database pipeline with:
 - **Trigger**: Automatic logging of contract changes
 - **ERD Documentation**: Complete entity relationship diagram specification
 
-### Task 2 - FastAPI CRUD Operations ✅
+### Task 2 - FastAPI CRUD Operations 
 - **PostgreSQL Endpoints**: Full CRUD for all tables
 - **MongoDB Endpoints**: Full CRUD for all collections
 - **Health Monitoring**: Database connection status
 - **Interactive Documentation**: Swagger UI at `/docs`
 - **Data Validation**: Pydantic models for request/response validation
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 Database-Prediction_Pipeline/
@@ -68,7 +68,7 @@ Database-Prediction_Pipeline/
 └── 📄 README.md                # Project documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -111,7 +111,7 @@ cp .env.template .env
    uvicorn src.api.main:app --reload
    ```
 
-## 📚 API Documentation
+##  API Documentation
 
 Once the server is running:
 - **API Base URL**: http://localhost:8000
@@ -170,7 +170,7 @@ Once the server is running:
 - `GET /api/mongodb/customers/{customerID}/complete` - Get complete customer data
 - `GET /api/mongodb/customers/search/` - Search customers by criteria
 
-## 🧪 Testing
+##  Testing
 
 ### API Testing
 ```bash
@@ -184,7 +184,7 @@ python tests/test_api.py
 ### Manual Testing
 Use the interactive documentation at http://localhost:8000/docs to test individual endpoints.
 
-## 🗄️ Database Schema
+##  Database Schema
 
 ### PostgreSQL Tables
 
@@ -231,14 +231,14 @@ Use the interactive documentation at http://localhost:8000/docs to test individu
 - `contracts` - Contract documents with billing information
 - `services` - Service documents with subscription details
 
-## 📊 Dataset
+##  Dataset
 
 The project uses the **Telco Customer Churn Dataset** from Kaggle:
 - **Source**: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 - **Size**: ~7,000 customer records
 - **Features**: 21 columns including demographics, services, and churn status
 
-## 🔧 Database Features
+##  Database Features
 
 ### Stored Procedure
 ```sql
@@ -262,7 +262,7 @@ FOR EACH ROW
 EXECUTE FUNCTION log_contract_update();
 ```
 
-## 🛠️ Environment Variables
+##  Environment Variables
 
 Create a `.env` file with the following configuration:
 
@@ -283,9 +283,9 @@ API_HOST=0.0.0.0
 API_PORT=8000
 ```
 
-## 📋 Task Completion Status
+##  Task Completion Status
 
-### ✅ Task 1 - Database Implementation
+### Task 1 - Database Implementation
 - [x] PostgreSQL database with 4+ tables
 - [x] Primary and foreign key relationships
 - [x] MongoDB collections implementation
@@ -294,7 +294,7 @@ API_PORT=8000
 - [x] ERD diagram specification
 - [x] Kaggle dataset integration
 
-### ✅ Task 2 - FastAPI CRUD Operations
+###  Task 2 - FastAPI CRUD Operations
 - [x] POST endpoints (Create operations)
 - [x] GET endpoints (Read operations)
 - [x] PUT endpoints (Update operations)
@@ -305,7 +305,7 @@ API_PORT=8000
 - [x] Error handling and status codes
 - [x] API documentation
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -326,7 +326,7 @@ API_PORT=8000
    - Check if port 8000 is available
    - Verify all dependencies are installed
 
-## 👥 Team Contributions
+## Team Contributions
 
 Document your team member contributions in the final report:
 - Database design and implementation
@@ -334,10 +334,8 @@ Document your team member contributions in the final report:
 - Testing and validation
 - Documentation and ERD creation
 
-## 📄 License
+##  License
 
 This project is created for educational purposes as part of a database and API development assignment.
 
----
 
-**Happy Coding! 🚀**
