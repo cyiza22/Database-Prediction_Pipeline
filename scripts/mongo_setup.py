@@ -14,7 +14,18 @@ client = MongoClient(MONGO_URI)
 db = client[MONGO_DB]
 
 # Load dataset (after downloading with kagglehub)
-df = pd.read_csv("Telco-Customer-Churn.csv")
+data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+csv_file = None
+for file in os.listdir(data_dir):
+    if file.endswith('.csv') and 'telco' in file.lower():
+        csv_file = os.path.join(data_dir, file)
+        break
+
+if csv_file and os.path.exists(csv_file):
+    df = pd.read_csv(csv_file)
+else:
+    print("Dataset not found. Please run download_dataset.py first.")
+    exit(1)
 
 # Create collections
 customers_col = db["customers"]

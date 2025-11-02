@@ -3,3 +3,6 @@ pymongo
 pandas
 kagglehub
 python-dotenv
+fastapi
+uvicorn[standard]
+pydantic
